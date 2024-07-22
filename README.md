@@ -4,8 +4,8 @@ This is my attempt to create a qr code generator appc which allows user to creat
 
 ## Scrennshots
 
-![Screenshot 1](assets/images/Screenshot1.jpg)
+![Screenshot 1](Screenshot/screenshot_1.jpg)
 
-![Screenshot 2](assets/images/Screenshot2.jpg)
+![Screenshot 2](Screenshot/screenshot_2.jpg)
 
-![Screenshot 3](assets/images/Screenshot3.jpg)
+![Screenshot 3](Screenshot/screenshot3.jpg)
