@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>680</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>680</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>500</width>
+    <height>680</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>QR_Code_Generator_Application</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Icons/Logo.jpg</normaloff>Icons/Logo.jpg</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="Main_Body">
+      <property name="styleSheet">
+       <string notr="true">QFrame#Main_Body{
+    background-color: rgb(250, 247, 240);
+}
+QPushButton#Push_Button_1{
+	background-color: rgb(188, 206, 248);
+    border: 2px solid rgb(205, 252, 246);
+    border-radius: 20px;
+}
+QPushButton#Push_Button_2,
+QPushButton#Push_Button_3,
+QPushButton#Push_Button_4{
+    background-color: rgb(188, 206, 248);
+    border: 2px solid rgb(205, 252, 246);
+    border-radius: 17px;
+}
+QLineEdit#Line_Edit_1,
+QLineEdit#Line_Edit_2,
+QLineEdit#Line_Edit_3{
+    border: 3px solid rgb(205, 252, 246);
+    border-radius: 17px;
+    padding-right: 20px;
+    padding-left: 15px;
+    padding-bottom: 2px;
+}
+QLabel#Label_4,
+QLabel#Label_5{
+	border: 2px solid #ccc;
+	border-radius: 15px;
+}
+
+Line#line{
+	background-color: rgb(0, 0, 0);
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="Label_1">
+       <property name="geometry">
+        <rect>
+         <x>125</x>
+         <y>10</y>
+         <width>250</width>
+         <height>50</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Monotype Corsiva</family>
+         <pointsize>16</pointsize>
+         <italic>true</italic>
+        </font>
+       </property>
+       <property name="text">
+        <string>QR Code Generator App</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Label_4">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>270</y>
+         <width>220</width>
+         <height>220</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Monotype Corsiva</family>
+         <pointsize>14</pointsize>
+         <italic>true</italic>
+        </font>
+       </property>
+       <property name="text">
+        <string>QR Without Logo Will Be Shown Here</string>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Image Scanner App/pics/1-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+       <property name="margin">
+        <number>15</number>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Push_Button_2">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>185</y>
+         <width>200</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Monotype Corsiva</family>
+         <pointsize>11</pointsize>
+         <italic>true</italic>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string>Generate</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Push_Button_4">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>620</y>
+         <width>200</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Monotype Corsiva</family>
+         <pointsize>12</pointsize>
+         <italic>true</italic>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string>Submit</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Line_Edit_1">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>80</y>
+         <width>350</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="inputMask">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>Paste The Link You Want The QR Of</string>
+       </property>
+      </widget>
+      <widget class="Line" name="line">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>240</y>
+         <width>500</width>
+         <height>2</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Label_6">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>557</y>
+         <width>80</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Monotype Corsiva</family>
+         <pointsize>14</pointsize>
+         <italic>true</italic>
+        </font>
+       </property>
+       <property name="text">
+        <string>Name :-</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Line_Edit_3">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>560</y>
+         <width>350</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>Name You Want To save The QR File</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Label_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>77</y>
+         <width>80</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Monotype Corsiva</family>
+         <pointsize>14</pointsize>
+         <italic>true</italic>
+        </font>
+       </property>
+       <property name="text">
+        <string>URL :-</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Label_3">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>127</y>
+         <width>80</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Monotype Corsiva</family>
+         <pointsize>14</pointsize>
+         <italic>true</italic>
+        </font>
+       </property>
+       <property name="text">
+        <string>lOGO :-</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="Line_Edit_2">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>130</y>
+         <width>300</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="placeholderText">
+        <string>Path of Logo Image</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="Label_5">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>270</y>
+         <width>220</width>
+         <height>220</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Monotype Corsiva</family>
+         <pointsize>14</pointsize>
+         <italic>true</italic>
+        </font>
+       </property>
+       <property name="text">
+        <string>QR With Logo Will Be Shown Here</string>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Image Scanner App/pics/1-removebg-preview.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+       <property name="margin">
+        <number>15</number>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="Radio_Button_1">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>500</y>
+         <width>80</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string>Option 1</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="Radio_Button_2">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>500</y>
+         <width>140</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string>Option 2 With Logo</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Push_Button_1">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>127</y>
+         <width>40</width>
+         <height>40</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Icons/search.png</normaloff>Icons/search.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>15</width>
+         <height>15</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Push_Button_3">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>620</y>
+         <width>200</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Monotype Corsiva</family>
+         <pointsize>11</pointsize>
+         <italic>true</italic>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string>Previous</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Icons/left-arrow.png</normaloff>Icons/left-arrow.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>15</width>
+         <height>15</height>
+        </size>
+       </property>
+      </widget>
+      <zorder>Label_4</zorder>
+      <zorder>Label_1</zorder>
+      <zorder>Push_Button_2</zorder>
+      <zorder>Push_Button_4</zorder>
+      <zorder>Line_Edit_1</zorder>
+      <zorder>line</zorder>
+      <zorder>Label_6</zorder>
+      <zorder>Line_Edit_3</zorder>
+      <zorder>Label_2</zorder>
+      <zorder>Label_3</zorder>
+      <zorder>Line_Edit_2</zorder>
+      <zorder>Label_5</zorder>
+      <zorder>Radio_Button_1</zorder>
+      <zorder>Radio_Button_2</zorder>
+      <zorder>Push_Button_1</zorder>
+      <zorder>Push_Button_3</zorder>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
